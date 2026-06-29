@@ -12,7 +12,7 @@ import PlatformStats from "@/components/home/PlatformStats";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import CustomerReviews from "@/components/home/CustomerReviews";
 
-// সেকশনগুলো অ্যারেতে রাখা হয়েছে যাতে ম্যাপ করা যায়
+
 const sections = [
   FeaturedPrompts,
   AIEngines,
@@ -26,7 +26,7 @@ export default function HomePage() {
   const { data: session } = authClient.useSession();
   const router = useRouter();
 
-  // Google login Redirect লজিক
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const fromGoogle = params.get("fromGoogle");
