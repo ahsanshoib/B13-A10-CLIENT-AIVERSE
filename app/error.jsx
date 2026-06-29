@@ -13,7 +13,7 @@ export default function Error({ error, reset }) {
         <div className="flex justify-center mb-6">
           <Sparkles className="w-16 h-16 text-red-300" />
         </div>
-        <h1 className="text-4xl font-black text-red-500 mb-4">
+        <h1 className="text-4xl font-black text-red-600 mb-4">
           Something went wrong!
         </h1>
         <p className="text-gray-500 mb-8">{error?.message || "An unexpected error occurred."}</p>
