@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🚀 AiVERSE – AI Prompt Sharing & Marketplace
 
-## Getting Started
+«Create • Discover • Share • Sell AI Prompts»
 
-First, run the development server:
+AiVERSE is a modern AI Prompt Sharing & Marketplace where users can create, explore, bookmark, review, and manage high-quality AI prompts for popular AI tools like ChatGPT, Gemini, Claude, Midjourney, and more.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🌐 Live Website
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🔗 Live Site: https://b13-a10-client-aiverse.vercel.app
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+🎯 Project Purpose
 
-To learn more about Next.js, take a look at the following resources:
+AiVERSE is designed to build a community-driven platform where AI enthusiasts can easily discover, share, and monetize high-quality prompts. The platform provides secure authentication, premium content access, role-based dashboards, analytics, and a smooth user experience.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✨ Key Features
 
-## Deploy on Vercel
+- 🔐 JWT Authentication & Google Login
+- 👤 Role-Based Access Control (User, Creator & Admin)
+- 📝 Create, Update & Delete AI Prompts
+- 🔍 Backend Search, Filter & Sorting
+- 📑 Bookmark & Save Favorite Prompts
+- 📋 One-Click Prompt Copy with Copy Counter
+- ⭐ Review & Rating System
+- 🚩 Prompt Reporting System
+- 💳 Stripe Payment Integration for Premium Access
+- 📊 Analytics Dashboard with Recharts
+- 🛡️ Admin Prompt Moderation & User Management
+- 📱 Fully Responsive Design
+- 🎨 Smooth Animations using Framer Motion
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🛠️ Tech Stack
+
+🎨 Frontend
+
+- Next.js
+- JavaScript
+- Tailwind CSS
+- DaisyUI
+- Framer Motion
+- Axios
+- React Hook Form
+- React Toastify
+- Recharts
+
+⚙️ Backend
+
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- Better Auth
+- JWT
+- Stripe API
+- ImgBB API
+
+---
+
+📦 NPM Packages Used
+
+- axios
+- react-hook-form
+- react-toastify
+- framer-motion
+- react-icons
+- recharts
+- mongoose
+- stripe
+- better-auth
+- dotenv
+- cors
+
+---
+
+🔒 Security Features
+
+- ✅ Environment Variables
+- ✅ JWT Protected APIs
+- ✅ Role-Based Middleware
+- ✅ Secure MongoDB Credentials
+- ✅ Protected Private Routes
+
+---
+
+📈 Project Highlights
+
+- 🔍 Server-side Search, Filter & Sorting
+- 📄 Pagination
+- 📊 MongoDB Aggregation Pipeline
+- 💳 One-Time Premium Subscription
+- ⭐ Recruiter-Friendly Modern UI
+- 🚀 Fast & Responsive User Experience
+
+---
+
+👨‍💻 Author
+
+Developed by: Ahsan Shoib Ratul
+
+⭐ If you like this project, don't forget to give it a Star on GitHub!
