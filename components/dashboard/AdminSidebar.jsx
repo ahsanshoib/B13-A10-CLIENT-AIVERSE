@@ -28,7 +28,7 @@ export default function AdminSidebar({ user }) {
 
   return (
     <aside className="w-64 shrink-0 bg-white border-r border-green-100 min-h-screen flex flex-col">
-      {/* 1. Logo area with increased bottom margin */}
+  
       <div className="p-5 border-b border-green-100 mb-[30px]">
         <Link href="/" className="flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-green-600" />
@@ -36,7 +36,7 @@ export default function AdminSidebar({ user }) {
         </Link>
       </div>
 
-      {/* 2. User profile area with increased bottom margin */}
+      
       <div className="px-4 mb-[30px]">
         <div className="flex items-center gap-3 bg-green-50 rounded-xl p-3">
           <div className="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center text-white font-bold text-lg">
@@ -49,7 +49,7 @@ export default function AdminSidebar({ user }) {
         </div>
       </div>
 
-      {/* 3. Navigation with increased vertical spacing (gap-3 instead of space-y-1) */}
+      
       <nav className="flex-1 px-3 flex flex-col gap-[8px]">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -71,7 +71,7 @@ export default function AdminSidebar({ user }) {
         })}
       </nav>
 
-      {/* 4. Logout area with increased bottom padding */}
+      
       <div className="p-4 border-t border-green-100 pb-[30px]">
         <button
           onClick={handleLogout}

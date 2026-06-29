@@ -51,7 +51,7 @@ export default function UserSidebar({ user }) {
         </div>
       </div>
 
-      {/* 3. Navigation with increased vertical spacing (gap-[8px] instead of space-y-0.5) */}
+      
       <nav className="flex-1 px-3 flex flex-col gap-[8px]">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -73,7 +73,7 @@ export default function UserSidebar({ user }) {
         })}
       </nav>
 
-      {/* 4. Logout area with increased bottom padding */}
+    
       <div className="px-4 py-4 border-t border-green-50 pb-[30px]">
         <button
           onClick={handleLogout}
