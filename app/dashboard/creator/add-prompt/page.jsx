@@ -257,7 +257,7 @@ export default function AddPromptPage() {
             <button
               type="submit"
               disabled={loading || uploading}
-              style={{ padding: "12px 24px" }}
+              style={{ padding: "10px 20px" }}
               className="bg-green-500 text-white rounded-xl font-black uppercase hover:bg-gray-800 transition-all disabled:opacity-60 flex flex-col items-center justify-center"
             >
               <span className="text-[9px]">Submit for review</span>
