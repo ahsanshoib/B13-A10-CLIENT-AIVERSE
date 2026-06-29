@@ -101,7 +101,7 @@ export default function AddPromptPage() {
     
       <div className="bg-white rounded-2xl border border-green-100 p-6 shadow-sm max-w-2xl mx-auto">
         <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Title */}
+        
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wide">
               Prompt Title
@@ -116,7 +116,7 @@ export default function AddPromptPage() {
             />
           </div>
 
-          {/* Description */}
+      
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wide">
               Short Description
@@ -131,7 +131,7 @@ export default function AddPromptPage() {
             />
           </div>
 
-          {/* Content */}
+  
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wide">
               Prompt Content Template
@@ -146,7 +146,7 @@ export default function AddPromptPage() {
             />
           </div>
 
-          {/* Category & Engine */}
+      
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wide">
@@ -184,7 +184,7 @@ export default function AddPromptPage() {
             </div>
           </div>
 
-          {/* Difficulty & Visibility */}
+          
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wide">
@@ -219,7 +219,7 @@ export default function AddPromptPage() {
             </div>
           </div>
 
-          {/* Tags */}
+      
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2 uppercase tracking-wide">
               Tags (comma separated)
