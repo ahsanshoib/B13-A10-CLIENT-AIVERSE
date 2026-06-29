@@ -28,7 +28,7 @@ export default function FeaturedPrompts() {
 
   return (
     <section className="w-full py-24 bg-white px-6">
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-6xl mx-auto w-full">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
