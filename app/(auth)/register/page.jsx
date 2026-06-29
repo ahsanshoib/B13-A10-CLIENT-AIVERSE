@@ -240,7 +240,7 @@ const handleRegister = async (e) => {
             Continue with Google
           </button>
 
-          <p className="text-center text-sm text-gray-500 mt-6">
+          <p className="text-center text-sm text-gray-600 mt-6">
             Already have an account?{" "}
             <Link href="/login" className="text-green-600 font-semibold hover:underline">
               Sign In
