@@ -75,7 +75,7 @@ export default function Banner() {
     type="button" 
     onClick={() => router.push("/register")} 
     style={{ padding: "8px 20px" }}
-    className="bg-gray-900 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-black transition-all flex items-center justify-center"
+    className="bg-gray-800 text-white rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-black transition-all flex items-center justify-center"
   >
     Creator
   </button>
