@@ -5,7 +5,7 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import LoadingSpinner from "@/components/shared/LoadingSpinner";
 import { authClient } from "@/lib/auth-client";
-import { Copy, Star, Lock, Sparkles, Search } from "lucide-react";
+import { Copy, Star, Lock, Sparkles } from "lucide-react";
 
 const categories = ["All", "Coding", "Writing", "Marketing", "Graphics Design", "Other"];
 const engines = ["All", "ChatGPT", "Gemini", "Claude", "Midjourney", "NotebookLM", "Other"];
@@ -54,14 +54,14 @@ function AllPromptsContent() {
 
   return (
     <div className="min-h-screen bg-white pt-20 w-full flex justify-center">
-      <div className="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-8">
+      <div className="max-w-7xl w-full px-4 py-10 flex flex-col md:flex-row gap-8">
 
         {/* Sidebar */}
         <aside className="w-full md:w-56 shrink-0">
           <div className="bg-green-50 rounded-2xl p-5 sticky top-24">
             <h2 className="text-xl font-black text-green-500 mb-5">FILTERS</h2>
 
-            <div className="mb-8">
+            <div className="mb-6">
               <p className="text-xs font-black text-gray-700 uppercase tracking-wider mb-2">All Engine</p>
               <ul className="space-y-0.5">
                 {engines.map(e => (
@@ -73,9 +73,9 @@ function AllPromptsContent() {
               </ul>
             </div>
 
-<div className="w-full h-px bg-green-200 mb-6" />
+            <div className="w-full h-px bg-green-200 mb-6" />
 
-            <div className="mb-8">
+            <div className="mb-6">
               <p className="text-xs font-black text-gray-700 uppercase tracking-wider mb-2">Category</p>
               <ul className="space-y-0.5">
                 {categories.map(c => (
@@ -87,9 +87,9 @@ function AllPromptsContent() {
               </ul>
             </div>
 
-          <div className="w-full h-px bg-green-200 mb-6" />
+            <div className="w-full h-px bg-green-200 mb-6" />
 
-            <div className="mb-8">
+            <div>
               <p className="text-xs font-black text-gray-700 uppercase tracking-wider mb-2">Difficulty</p>
               <ul className="space-y-0.5">
                 {difficulties.map(d => (
@@ -132,7 +132,7 @@ function AllPromptsContent() {
                 onClick={() => { setSort(s.key); setPage(1); }}
                 style={{ padding: "2px 10px" }}
                 className={`rounded-xl text-sm font-normal transition-colors ${sort === s.key ? "bg-green-600 text-white" : "bg-green-100 text-green-700 hover:bg-green-200"}`}
-    >
+              >
                 {s.label}
               </button>
             ))}
@@ -148,69 +148,76 @@ function AllPromptsContent() {
               <p className="font-semibold">No prompts found</p>
             </div>
           ) : (
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-  {prompts.map((prompt) => (
-    
-    <div key={prompt._id} className="p-[8px]">
-      
-      
-      <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all h-full">
-        {prompt.thumbnail ? (
-          <img src={prompt.thumbnail} alt={prompt.title} className="w-full h-44 object-cover" />
-        ) : (
-          <div className="w-full h-44 bg-gradient-to-br from-green-100 to-emerald-200 flex items-center justify-center">
-            <Sparkles className="w-10 h-10 text-green-400" />
-          </div>
-        )}
+              {prompts.map((prompt) => (
 
-        <div className="p-5 flex flex-col gap-3">
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2">
-            <span className="text-xs font-semibold text-green-700 border border-green-500 rounded-full px-3 py-1 flex items-center gap-1">
-              &lt;/&gt; {prompt.category}
-            </span>
-            <span className="text-xs font-semibold text-gray-700 border border-gray-300 rounded-full px-3 py-1 flex items-center gap-1">
-              ★★ {prompt.difficulty}
-            </span>
-            {prompt.visibility === "private" && (
-              <span className="text-xs font-semibold text-red-600 border border-red-400 rounded-full px-3 py-1 flex items-center gap-1">
-                <Lock className="w-3 h-3" /> PREMIUM
-              </span>
-            )}
-          </div>
 
-          {/* Title & Description */}
-          <div className="flex flex-col gap-1">
-            <h3 className="font-bold text-gray-900 text-base">{prompt.title}</h3>
-            <p className="text-gray-500 text-sm line-clamp-2">{prompt.description}</p>
-          </div>
 
-          {/* Tag */}
-          <div className="flex items-center gap-1 text-green-600 text-xs">
-            <Sparkles className="w-3 h-3" />
-            <span>#{prompt.tags?.[0] || prompt.category}</span>
-          </div>
+                <div key={prompt._id} className="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col">
 
-          {/* Creator & Stats */}
-          <div className="flex items-center justify-between text-xs text-gray-500">
-            <span>👤 {prompt.creatorName}</span>
-            <div className="flex items-center gap-3">
-              <span className="flex items-center gap-1"><Copy className="w-3 h-3" /> {prompt.copyCount}</span>
-              <span className="flex items-center gap-1"><Star className="w-3 h-3 fill-yellow-400 text-yellow-400" /> {prompt.averageRating || "0"}</span>
+                  {/* Thumbnail — inset with padding */}
+                  <div className="p-3 pb-0">
+                    <div className="rounded-xl overflow-hidden">
+                      {prompt.thumbnail ? (
+                        <img src={prompt.thumbnail} alt={prompt.title} className="w-full h-44 object-cover" />
+                      ) : (
+                        <div className="w-full h-44 bg-gradient-to-br from-green-100 to-emerald-200 flex items-center justify-center">
+                          <Sparkles className="w-10 h-10 text-green-400" />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-4 flex flex-col gap-3 flex-1">
+
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      <span className="text-xs font-semibold text-green-700 border border-green-500 rounded-full px-3 py-1 flex items-center gap-1">
+                        &lt;/&gt; {prompt.category}
+                      </span>
+                      <span className="text-xs font-semibold text-gray-700 border border-gray-300 rounded-full px-3 py-1 flex items-center gap-1">
+                        ★★ {prompt.difficulty}
+                      </span>
+                      {prompt.visibility === "private" && (
+                        <span className="text-xs font-semibold text-red-600 border border-red-400 rounded-full px-3 py-1 flex items-center gap-1">
+                          <Lock className="w-3 h-3" /> PREMIUM
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Title & Description */}
+                    <div className="flex flex-col gap-1">
+                      <h3 className="font-bold text-gray-900 text-base">{prompt.title}</h3>
+                      <p className="text-gray-500 text-sm line-clamp-2">{prompt.description}</p>
+                    </div>
+
+                    {/* Hashtag */}
+                    <div className="flex items-center gap-1 text-green-600 text-xs">
+                      <Sparkles className="w-3 h-3" />
+                      <span>#{prompt.tags?.[0] || prompt.category}</span>
+                    </div>
+
+                    {/* Creator & Stats */}
+                    <div className="flex items-center justify-between text-xs text-gray-500">
+                      <span>👤 {prompt.creatorName}</span>
+                      <div className="flex items-center gap-3">
+                        <span className="flex items-center gap-1"><Copy className="w-3 h-3" /> {prompt.copyCount}</span>
+                        <span className="flex items-center gap-1"><Star className="w-3 h-3 fill-yellow-400 text-yellow-400" /> {prompt.averageRating || "0"}</span>
+                      </div>
+                    </div>
+
+                    {/* Button */}
+                    <button
+                      onClick={() => handleViewDetails(prompt._id)}
+                      className="w-full bg-green-600 text-white py-2.5 rounded-xl font-semibold text-sm hover:bg-green-700 transition-colors flex items-center justify-center gap-2 mt-auto"
+                    >
+                      VIEW DETAILS
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-
-          {/* Button */}
-          <button onClick={() => handleViewDetails(prompt._id)}
-            className="w-full bg-green-600 text-white py-2.5 rounded-xl font-semibold text-sm hover:bg-green-700 transition-colors flex items-center justify-center gap-2 mt-1">
-            VIEW DETAILS
-          </button>
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
           )}
 
           {/* Pagination */}
@@ -237,21 +244,6 @@ function AllPromptsContent() {
     </div>
   );
 }
-
-// export default function AllPromptsPage() {
-//   return (
-//     <main className="w-full flex flex-col items-center">
-//       <Navbar />
-//       <Suspense fallback={<LoadingSpinner />}>
-//         <AllPromptsContent />
-//       </Suspense>
-//       <div className="w-full max-w-7xl mx-auto">
-//         <Footer />
-//       </div>
-//     </main>
-//   );
-// }
-
 
 export default function AllPromptsPage() {
   return (

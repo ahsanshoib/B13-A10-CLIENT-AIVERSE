@@ -70,7 +70,7 @@ export default function LoginPage() {
   const handleGoogleLogin = async () => {
     await authClient.signIn.social({
       provider: "google",
-      callbackURL: "/api/auth/google-redirect",
+      callbackURL: "/",
     });
   };
 

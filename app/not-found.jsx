@@ -16,12 +16,12 @@ export default function NotFound() {
         <p className="text-gray-500 mb-8">
           The page you are looking for does not exist.
         </p>
-        <Link
-          href="/"
-          className="bg-green-600 text-white px-20 py-4 rounded-xl font-bold hover:bg-green-700 transition-colors"
-        >
-          Go Home
-        </Link>
+       <Link
+  href="/"
+  className="bg-green-600 text-white px-16 py-6 rounded-xl font-bold hover:bg-green-700 transition-colors w-full md:w-auto text-center block"
+>
+  Go Home
+</Link>
       </div>
     </div>
   );
