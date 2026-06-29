@@ -27,8 +27,8 @@ export default function AIEngines() {
           className="text-center"
         >
         
-          <h2 className="text-4xl md:text-5xl font-black text-green-600 tracking-tight uppercase">
-            Engines
+        <h2 className="text-4xl md:text-5xl font-black text-green-600 tracking-tight uppercase">
+            ENGINE
           </h2>
         </motion.div>
 
