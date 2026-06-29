@@ -32,7 +32,8 @@ export default function AdminUpdateProfilePage() {
   }, [session, isPending]);
 
   const handleImageUpload = async (e) => {
-    const file = e.target.files[0];
+  const file = e.target.files[0];
+
     if (!file) return;
     if (file.size > 2 * 1024 * 1024) { toast.error("Image must be under 2MB"); return; }
     setUploading(true);
@@ -89,12 +90,12 @@ export default function AdminUpdateProfilePage() {
       <div className="bg-white rounded-2xl border border-green-100 p-8 shadow-sm max-w-lg">
         <form onSubmit={handleSave} className="space-y-6">
 
-          {/* Top Row: Photo (left) + Name (middle) + Camera (right) */}
+        
           <div className="flex items-center justify-between gap-4">
             
-            {/* Left: Photo + Name */}
+      
             <div className="flex items-center gap-4">
-              {/* Photo Box */}
+      
               <div className="w-12 h-12 rounded-xl overflow-hidden border-2 border-green-100 shrink-0">
                 {form.photoURL ? (
                   <img
@@ -109,11 +110,11 @@ export default function AdminUpdateProfilePage() {
                 )}
               </div>
 
-              {/* Name */}
+        
               <p className="font-bold text-gray-900 text-lg">{form.name || "Your Name"}</p>
             </div>
 
-            {/* Right: Camera Upload */}
+            
             <div className="flex flex-col items-center gap-1">
               <label className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center cursor-pointer hover:bg-green-700 transition-colors border-2 border-white shadow">
                 <Camera className="w-5 h-5 text-white" />
@@ -124,7 +125,7 @@ export default function AdminUpdateProfilePage() {
             </div>
           </div>
 
-          {/* Photo URL */}
+        
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               Photo URL <span className="text-gray-400 font-normal">(or paste a URL)</span>
@@ -138,7 +139,7 @@ export default function AdminUpdateProfilePage() {
             />
           </div>
 
-          {/* Name */}
+      
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
             <input
@@ -151,7 +152,7 @@ export default function AdminUpdateProfilePage() {
             />
           </div>
 
-          {/* Email readonly */}
+        
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
             <input
