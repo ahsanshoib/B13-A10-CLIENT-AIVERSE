@@ -22,7 +22,7 @@ const reviews = [
   {
     name: "Priya Patel",
     role: "UX Designer",
-    comment: "The Midjourney prompts saved me countless hours of work. Totally worth every penny!",
+    comment: "The Midjourney prompts saved me countless hours of work. Totally worth every penny! Just loved the awosome services",
     rating: 5,
     avatar: "P",
     color: "bg-purple-600",

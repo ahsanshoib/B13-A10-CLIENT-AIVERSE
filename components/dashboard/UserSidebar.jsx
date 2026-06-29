@@ -25,7 +25,7 @@ export default function UserSidebar({ user }) {
 
   return (
     <aside className="w-[280px] shrink-0 bg-white border-r border-green-100 min-h-screen flex flex-col">
-      {/* 1. Logo area with increased bottom margin */}
+      
       <div className="px-5 py-4 border-b border-green-50 mb-[30px]">
         <Link href="/" className="flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-green-600" />
@@ -33,7 +33,7 @@ export default function UserSidebar({ user }) {
         </Link>
       </div>
 
-      {/* 2. User profile area with increased bottom margin */}
+      
       <div className="px-4 mb-[30px]">
         <div className="flex items-center gap-3 bg-green-50 rounded-xl px-3 py-2.5 relative">
           {user?.isPremium && (
