@@ -52,7 +52,7 @@ export default function AdminProfilePage() {
           
           {/* User Info */}
           <div className="flex items-center gap-4 pb-6 border-b border-gray-100 mb-6">
-            <div className="w-16 h-16 bg-green-800 rounded-full flex items-center justify-center text-white font-black text-2xl">
+            <div className="w-16 h-16 bg-green-700 rounded-full flex items-center justify-center text-white font-black text-2xl">
               {user?.name?.charAt(0).toUpperCase()}
             </div>
             <div>
