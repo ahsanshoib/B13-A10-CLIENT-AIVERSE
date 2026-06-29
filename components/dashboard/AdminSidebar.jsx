@@ -64,7 +64,7 @@ export default function AdminSidebar({ user }) {
                   : "text-gray-600 hover:bg-green-50 hover:text-green-600"
               }`}
             >
-              <Icon className="w-4 h-4" />
+              <Icon className="w-3 h-3" />
               {item.label}
             </Link>
           );
