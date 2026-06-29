@@ -107,11 +107,11 @@ export default function Navbar() {
                 </div>
               ) : (
                 <>
-                  <Link href="/login" style={{ padding: "6px 18px" }}
+                  <Link href="/login" style={{ padding: "4px 12px" }}
                     className="border border-[#15803d]/40 text-[#15803d] rounded-2xl text-[14px] font-black uppercase tracking-widest hover:bg-[#15803d]/5 transition-all flex items-center justify-center">
                     Login
                   </Link>
-                  <Link href="/register" style={{ padding: "6px 18px" }}
+                  <Link href="/register" style={{ padding: "4px 12px" }}
                     className="bg-[#15803d] text-white rounded-2xl text-[14px] font-black uppercase tracking-widest hover:bg-[#166534] transition-all shadow-sm flex items-center justify-center">
                     Register
                   </Link>
