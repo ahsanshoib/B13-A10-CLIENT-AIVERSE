@@ -62,7 +62,7 @@ export default function CustomerReviews() {
       
       <div 
         className="bg-white rounded-3xl"
-        style={{ padding: "24px" }} 
+        style={{ padding: "16px" }} 
       >
         <div className="flex items-center gap-5 mb-8">
           <div className={`w-16 h-16 rounded-full ${review.color} flex items-center justify-center text-white font-black text-2xl`}>
