@@ -12,12 +12,22 @@ import PlatformStats from "@/components/home/PlatformStats";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import CustomerReviews from "@/components/home/CustomerReviews";
 
+// সেকশনগুলো অ্যারেতে রাখা হয়েছে যাতে ম্যাপ করা যায়
+const sections = [
+  FeaturedPrompts,
+  AIEngines,
+  TopCreators,
+  PlatformStats,
+  WhyChooseUs,
+  CustomerReviews,
+];
+
 export default function HomePage() {
   const { data: session } = authClient.useSession();
   const router = useRouter();
 
+  // Google login Redirect লজিক
   useEffect(() => {
-    
     const params = new URLSearchParams(window.location.search);
     const fromGoogle = params.get("fromGoogle");
 
@@ -31,19 +41,30 @@ export default function HomePage() {
           else router.replace("/dashboard/user/profile");
         });
     }
-  }, [session]);
+  }, [session, router]);
 
   return (
-    <main>
+    <main className="w-full flex flex-col items-center">
       <Navbar />
-      <Banner />
-      <FeaturedPrompts />
-      <AIEngines />
-      <TopCreators />
-      <PlatformStats />
-      <WhyChooseUs />
-      <CustomerReviews />
-      <Footer />
+      
+      {/* Banner Section */}
+      <div className="w-full">
+        <Banner />
+      </div>
+
+      {/* Dynamic Sections Mapping */}
+      <div className="w-full max-w-7xl mx-auto px-6 flex flex-col gap-16 md:gap-24 py-16">
+        {sections.map((Section, index) => (
+          <div key={index} className="w-full flex justify-center">
+             <Section />
+          </div>
+        ))}
+      </div>
+
+      {/* Footer Section */}
+      <div className="w-full max-w-7xl mx-auto pt-16 md:pt-24 px-6">
+        <Footer />
+      </div>
     </main>
   );
 }
