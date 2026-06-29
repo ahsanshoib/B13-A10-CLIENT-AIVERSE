@@ -19,7 +19,7 @@ export default function AIEngines() {
   return (
     <section className="w-full py-24 bg-white px-6">
       <div className="max-w-7xl mx-auto w-full">
-        {/* Section Heading */}
+      
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ export default function AIEngines() {
       
         <div className="h-16 md:h-20" />
 
-        {/* Engines Grid - 10 items in a row */}
+        
         <div className="grid grid-cols-5 md:grid-cols-10 gap-4 md:gap-6 w-full">
           {engines.map((engine, i) => (
             <motion.div

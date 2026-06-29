@@ -59,12 +59,7 @@ export default function Banner() {
     style={{ padding: "6px 18px" }}
     className="w-full border-2 border-gray-200 rounded-2xl focus:outline-none focus:border-green-600 text-gray-800 bg-white text-sm font-black tracking-widest transition-all shadow-sm pr-12"
   />
-  {/* <div className="absolute right-4 top-1/2 -translate-y-1/2">
-    <Search 
-      className="w-5 h-5 text-gray-400 cursor-pointer hover:text-green-600 transition-colors" 
-      onClick={handleSearch} 
-    />
-  </div> */}
+ 
 </div>
 
         <div className="flex items-center justify-center gap-6 w-full">
