@@ -99,7 +99,7 @@ export default function Navbar() {
                   </div>
                   <button
                     onClick={handleLogout}
-                    style={{ padding: "4px 12px" }}
+                    style={{ padding: "3px 9px" }}
                     className="flex items-center gap-1.5 text-sm font-black uppercase tracking-widest text-red-500 hover:text-red-600 transition-colors"
                   >
                     <LogOut className="w-4 h-4" /> Logout
