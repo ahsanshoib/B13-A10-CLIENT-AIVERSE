@@ -43,7 +43,7 @@ export default function SavedPromptsPage() {
     <div className="relative">
       <SparkleDecor />
       <div className="mb-6">
-        <h1 className="text-3xl font-black text-gray-900">
+        <h1 className="text-3xl font-black uppercase text-green-500">
           Saved Prompt Templates
         </h1>
         <p className="text-gray-500 text-sm mt-1">
@@ -86,6 +86,7 @@ export default function SavedPromptsPage() {
                   <p className="text-gray-500 text-sm">{prompt.description}</p>
                 </div>
                 <div className="flex gap-2 shrink-0">
+                  
                 <button
   onClick={() => router.push(`/prompts/${prompt._id}`)}
   style={{ padding: "3px 15px" }}

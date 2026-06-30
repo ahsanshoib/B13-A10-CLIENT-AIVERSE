@@ -63,7 +63,7 @@ export default function UserMyPromptsPage() {
     <div className="relative">
       <SparkleDecor />
       <div className="mb-6">
-        <h1 className="text-3xl font-black text-gray-900">
+        <h1 className="text-3xl font-black uppercase text-green-500">
           My Prompt Templates
         </h1>
         <p className="text-gray-500 text-sm mt-1">
@@ -72,13 +72,13 @@ export default function UserMyPromptsPage() {
       </div>
 
       {prompts.length === 0 ? (
-        <div className="bg-white rounded-2xl border border-green-100 p-16 text-center">
-          <AlertCircle className="w-12 h-12 text-gray-300 mx-auto mb-3" />
-          <p className="font-bold text-gray-700 text-lg">No Prompts Found</p>
-          <p className="text-gray-400 text-sm mt-1">
-            You have not published any prompts yet.
-          </p>
-        </div>
+        <div className="bg-white rounded-2xl border border-green-100 p-16 text-center flex flex-col items-center justify-center">
+  <AlertCircle className="w-12 h-12 text-gray-300 mb-3" />
+  <p className="font-bold text-gray-700 text-lg">No Prompts Found</p>
+  <p className="text-gray-400 text-sm mt-1">
+    You have not published any prompts yet.
+  </p>
+</div>
       ) : (
         <div className="space-y-4">
           {prompts.map((prompt) => (

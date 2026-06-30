@@ -29,7 +29,7 @@ export default function MyReviewsPage() {
     <div className="relative">
       <SparkleDecor />
       <div className="mb-6">
-        <h1 className="text-3xl font-black text-gray-900">
+        <h1 className="text-3xl font-black uppercase text-green-500">
           My Product Reviews
         </h1>
         <p className="text-gray-500 text-sm mt-1">Feedback and ratings</p>
